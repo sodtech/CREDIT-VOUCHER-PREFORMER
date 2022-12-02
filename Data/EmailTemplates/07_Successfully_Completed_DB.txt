@@ -1,0 +1,9 @@
+
+Processing: Visa MDB Charge Back process
+Department: Electronic Product Operations
+
+Dear Team, 
+
+Please the total LYC Amount is not the same as the amount found in the finacle DB.
+
+Best Regards

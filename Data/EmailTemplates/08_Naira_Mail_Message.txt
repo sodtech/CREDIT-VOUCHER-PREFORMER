@@ -1,0 +1,17 @@
+Processing: Credit Voucher process
+Department: Electronic Product Operations
+
+Dear Team, 
+
+Please be informed that I have detect a NGN Account, You have to raise a manual cross currency credit voucher.
+
+Detials of Transaction:
+
+Account Name: AccountName
+Acount Number : AccountNumber
+Amount :  _Amount
+
+FirstRobotics
+FirstBank of Nigeria
+35 Marina street, Lagos
+Please note that this is an RPA generated email, do not reply to it. For processing and scheduling enquiries please contact botcontrollers@firstbanknigeria.com. For other enquiries, please contact firstrobotics@firstbanknigeria.com.

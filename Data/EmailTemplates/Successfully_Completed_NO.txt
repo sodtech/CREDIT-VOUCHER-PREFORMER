@@ -1,0 +1,13 @@
+
+Processing: Visa MDB Charge Back process
+Department: Electronic Product Operations
+
+Dear Team, 
+
+Please be informed that MDB Charge Back report for the day is available.
+
+The account for MDB is not balanced.
+
+Kindly find attached for your review.
+
+Best Regards
