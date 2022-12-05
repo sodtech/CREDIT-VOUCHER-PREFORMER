@@ -11,7 +11,7 @@
     <InArgument x:TypeArguments="x:Decimal" />
   </this:Build_Upload_File.in_TotalAmountBase2>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>778,3552</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>778,3829</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="43">
@@ -106,9 +106,10 @@
       <AssemblyReference>Microsoft.Extensions.DependencyModel</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Build_Upload_File" sap:VirtualizedContainerService.HintSize="568,3487" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Build_Upload_File" sap:VirtualizedContainerService.HintSize="692,3564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ReportSheetName" />
       <Variable x:TypeArguments="x:String" Name="SisfigFilePath" />
@@ -286,7 +287,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:MultipleAssign DisplayName="Multiple Assign WF Variables" sap:VirtualizedContainerService.HintSize="526,255" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
+    <ui:MultipleAssign DisplayName="Multiple Assign WF Variables" sap:VirtualizedContainerService.HintSize="526,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_370">
@@ -363,7 +364,7 @@
       </ui:MultipleAssign.AssignOperations>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -401,7 +402,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Assign DisplayName="Assign CreditAccountNumber" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_554">
+    <Assign DisplayName="Assign CreditAccountNumber" sap:VirtualizedContainerService.HintSize="526,60" sap2010:WorkflowViewState.IdRef="Assign_554">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3050">CreditAccountNumber</mca:CSharpReference>
@@ -413,13 +414,13 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Sequence DisplayName="Sequence: Upload File" sap:VirtualizedContainerService.HintSize="526,1394" sap2010:WorkflowViewState.IdRef="Sequence_567">
+    <Sequence DisplayName="Sequence: Upload File" sap:VirtualizedContainerService.HintSize="650,1675" sap2010:WorkflowViewState.IdRef="Sequence_567">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="CreditVDT" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -451,7 +452,7 @@
           </InArgument>
         </ui:ReadRange.WorkbookPath>
       </ui:ReadRange>
-      <If DisplayName="If  Transaction Exist" sap:VirtualizedContainerService.HintSize="484,728" sap2010:WorkflowViewState.IdRef="If_65">
+      <If DisplayName="If  Transaction Exist" sap:VirtualizedContainerService.HintSize="608,1350" sap2010:WorkflowViewState.IdRef="If_65">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3273">CreditVDT.Rows.Count &gt; 0</mca:CSharpValue>
@@ -464,13 +465,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Dollar Sheet: Update all Merchant" sap:VirtualizedContainerService.HintSize="434,541" sap2010:WorkflowViewState.IdRef="ForEachRow_45">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Dollar Sheet: Update all Merchant" sap:VirtualizedContainerService.HintSize="572,1163" sap2010:WorkflowViewState.IdRef="ForEachRow_45">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentTrans" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Build Upload Body" sap:VirtualizedContainerService.HintSize="272,426" sap2010:WorkflowViewState.IdRef="Sequence_565">
+                <Sequence DisplayName="Build Upload Body" sap:VirtualizedContainerService.HintSize="538,1048" sap2010:WorkflowViewState.IdRef="Sequence_565">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="MerchantName" />
                     <Variable x:TypeArguments="x:String" Name="AccountType" />
@@ -482,7 +483,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="if (Row[&quot;USD&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;USD&quot;;&#xA;}&#xA;else if (Row[&quot;NGN&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;NGN&quot;;&#xA;}&#xA;else if (Row[&quot;GBP&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xA;}&#xA;else if (Row[&quot;EUR&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xA;}&#xA;else&#xA;{&#xA;&#x9;AcctType = &quot;UNCONFRIMED&quot;;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="if (Row[&quot;USD&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;USD&quot;;&#xD;&#xA;}&#xD;&#xA;else if (Row[&quot;NGN&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;NGN&quot;;&#xD;&#xA;}&#xD;&#xA;else if (Row[&quot;GBP&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xD;&#xA;}&#xD;&#xA;else if (Row[&quot;EUR&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;UNCONFRIMED&quot;;&#xD;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="496,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                     <ui:InvokeCode.Arguments>
                       <InArgument x:TypeArguments="sd:DataRow" x:Key="Row">
                         <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3304">CurrentTrans</mca:CSharpValue>
@@ -498,7 +499,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeCode>
-                  <If DisplayName="If Acct type is Unconfrimed" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="If_67">
+                  <If DisplayName="If Acct type is Unconfrimed" sap:VirtualizedContainerService.HintSize="496,430" sap2010:WorkflowViewState.IdRef="If_67">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3356">AccountType == "UNCONFRIMED"</mca:CSharpValue>
@@ -506,19 +507,19 @@
                     </If.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Sequence Get Acct Type" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_589">
+                      <Sequence DisplayName="Sequence Get Acct Type" sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_589">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetAccountType" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="FinacleDB\\GetAccountType.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetAccountType" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="FinacleDB\\GetAccountType.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_AcctNumber">
                               <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3357">CurrentTrans["UNCONFIRMED"].ToString()</mca:CSharpValue>
@@ -535,12 +536,12 @@
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:InvokeWorkflowFile>
-                        <Assign DisplayName="Assign AccountType" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_552">
+                        <Assign DisplayName="Assign AccountType" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_552">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">
                               <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3022">AccountType</mca:CSharpReference>
@@ -564,12 +565,12 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="496,61" sap2010:WorkflowViewState.IdRef="WriteLine_1">
                     <InArgument x:TypeArguments="x:String">
                       <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3305">AccountType</mca:CSharpValue>
                     </InArgument>
                   </WriteLine>
-                  <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                  <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="496,294" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                     <Switch.Expression>
                       <InArgument x:TypeArguments="x:String">
                         <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3293">AccountType</mca:CSharpValue>
@@ -577,7 +578,7 @@
                     </Switch.Expression>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -588,7 +589,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="431,410" sap2010:WorkflowViewState.IdRef="MultipleAssign_210">
+                      <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_210">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1797">
@@ -611,7 +612,7 @@
                               </ui:AssignOperation.To>
                               <ui:AssignOperation.Value>
                                 <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3362">CurrentTrans["TRANSDATE"].ToString()</mca:CSharpValue>
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3405">DateTime.Parse(CurrentTrans["TRANSDATE"].ToString()).ToString("dd.MM.yy")</mca:CSharpValue>
                                 </InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
@@ -725,12 +726,12 @@
                         </ui:MultipleAssign.AssignOperations>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="AddDataRow_193">
+                      <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AddDataRow_193">
                         <ui:AddDataRow.DataRow>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3360">AddRow</mca:CSharpValue>
@@ -749,10 +750,10 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:AddDataRow>
                     </Sequence>
-                    <Sequence x:Key="NGN" DisplayName="Send Mail and Credit Account" sap:VirtualizedContainerService.HintSize="284,66" sap2010:WorkflowViewState.IdRef="Sequence_581">
+                    <Sequence x:Key="NGN" DisplayName="Send Mail and Credit Account" sap:VirtualizedContainerService.HintSize="284,614" sap2010:WorkflowViewState.IdRef="Sequence_581">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -933,7 +934,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_208">
+                        <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="431,379" sap2010:WorkflowViewState.IdRef="MultipleAssign_208">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1777">
@@ -956,7 +957,7 @@
                                 </ui:AssignOperation.To>
                                 <ui:AssignOperation.Value>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3336">CurrentTrans["TRANSDATE"].ToString()</mca:CSharpValue>
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3406">DateTime.Parse(CurrentTrans["TRANSDATE"].ToString()).ToString("dd.MM.yy")</mca:CSharpValue>
                                   </InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
@@ -1058,12 +1059,12 @@
                           </ui:MultipleAssign.AssignOperations>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:MultipleAssign>
-                        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AddDataRow_194">
+                        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="AddDataRow_194">
                           <ui:AddDataRow.DataRow>
                             <InArgument x:TypeArguments="sd:DataRow">
                               <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3371">AddRow</mca:CSharpValue>
@@ -1090,7 +1091,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If DisplayName="If GBP or EUR" sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="If_66">
+                      <If DisplayName="If GBP or EUR" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_66">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3344">CurrentTrans["GBP"].ToString() != ""</mca:CSharpValue>
@@ -1111,7 +1112,7 @@
                             </Assign.To>
                             <Assign.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3388">CurrentTrans["GBP"].ToString() +" RFD- "+ CurrentTrans["TRANSDATE"].ToString() + " " + CurrentTrans["MERCHANTNAME"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3407">CurrentTrans["GBP"].ToString() +" GBP RFD- "+DateTime.Parse(CurrentTrans["TRANSDATE"].ToString()).ToString("dd.MM.yy") + " " + CurrentTrans["MERCHANTNAME"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </Assign.Value>
                           </Assign>
@@ -1125,13 +1126,13 @@
                             </Assign.To>
                             <Assign.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3389">CurrentTrans["EUR"].ToString() +" RFD- "+ CurrentTrans["TRANSDATE"].ToString() + " " + CurrentTrans["MERCHANTNAME"].ToString()</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3408">CurrentTrans["EUR"].ToString() +" EUR RFD- "+ DateTime.Parse(CurrentTrans["TRANSDATE"].ToString()).ToString("dd.MM.yy") + " " + CurrentTrans["MERCHANTNAME"].ToString()</mca:CSharpValue>
                               </InArgument>
                             </Assign.Value>
                           </Assign>
                         </If.Else>
                       </If>
-                      <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="431,286" sap2010:WorkflowViewState.IdRef="MultipleAssign_209">
+                      <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_209">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1790">
@@ -1220,12 +1221,12 @@
                         </ui:MultipleAssign.AssignOperations>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="431,185" sap2010:WorkflowViewState.IdRef="AddDataRow_195">
+                      <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AddDataRow_195">
                         <ui:AddDataRow.DataRow>
                           <InArgument x:TypeArguments="sd:DataRow">
                             <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3372">AddRow</mca:CSharpValue>
@@ -1238,7 +1239,7 @@
                         </ui:AddDataRow.DataTable>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -1271,14 +1272,14 @@
           </Sequence>
         </If.Else>
       </If>
-      <Sequence DisplayName="Sequence Credit Voucher" sap:VirtualizedContainerService.HintSize="484,407" sap2010:WorkflowViewState.IdRef="Sequence_591">
+      <Sequence DisplayName="Sequence Credit Voucher" sap:VirtualizedContainerService.HintSize="608,66" sap2010:WorkflowViewState.IdRef="Sequence_591">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="431,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_211">
+        <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_211">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1808">
@@ -1345,12 +1346,12 @@
           </ui:MultipleAssign.AssignOperations>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:MultipleAssign>
-        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="AddDataRow_196">
+        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AddDataRow_196">
           <ui:AddDataRow.DataRow>
             <InArgument x:TypeArguments="sd:DataRow">
               <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3399">AddRow</mca:CSharpValue>
@@ -1370,7 +1371,7 @@
         </ui:AddDataRow>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="END the Upload File" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_85">
+    <Sequence DisplayName="END the Upload File" sap:VirtualizedContainerService.HintSize="650,66" sap2010:WorkflowViewState.IdRef="Sequence_85">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="merAccountNum" />
         <Variable x:TypeArguments="x:Decimal" Name="totalFEE" />
@@ -1459,7 +1460,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataRow>
     </Sequence>
-    <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="OutputDataTable_3">
+    <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="650,51" sap2010:WorkflowViewState.IdRef="OutputDataTable_3">
       <ui:OutputDataTable.DataTable>
         <InArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_297">UploadFileDT</mca:CSharpValue>

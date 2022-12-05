@@ -105,6 +105,7 @@
       <AssemblyReference>UiPath.Orchestrator.Service</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Bot Hub" sap:VirtualizedContainerService.HintSize="796,1468" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -301,10 +302,10 @@
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <av:Point x:Key="ShapeLocation">160,127</av:Point>
                         <av:Size x:Key="ShapeSize">200,66</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">360,160 390,160 390,152.5</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">360,160 390,160 390,152.5 400,152.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="304,739" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="TrackerFileExist" />
                         <Variable x:TypeArguments="x:String" Name="TrackerFilePath" />
@@ -471,6 +472,18 @@
                           </Assign>
                         </If.Else>
                       </If>
+                      <Assign DisplayName="Assign reportDate" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:DateTime">
+                            <mca:CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_252">ReportDate</mca:CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:DateTime">
+                            <mca:CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_720">DateTime.Now.AddDays(Convert.ToDouble(-7))</mca:CSharpValue>
+                          </InArgument>
+                        </Assign.Value>
+                      </Assign>
                       <ui:LogMessage DisplayName="Log Date info Log" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
@@ -489,14 +502,14 @@
                       <FlowStep x:Name="__ReferenceID2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <av:Point x:Key="ShapeLocation">390,127</av:Point>
+                            <av:Point x:Key="ShapeLocation">400,127</av:Point>
                             <av:Size x:Key="ShapeSize">200,51</av:Size>
-                            <av:PointCollection x:Key="ConnectorLocation">490,178 490,243</av:PointCollection>
+                            <av:PointCollection x:Key="ConnectorLocation">500,178 500,208 490,208 490,243</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                           <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                            <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_72">
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetReports workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_118" UnSafe="False" WorkflowFileName="GetReports.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
@@ -531,7 +544,7 @@
                                   <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">Config</mca:CSharpValue>
                                 </InArgument>
                                 <InArgument x:TypeArguments="x:String" x:Key="in_reportDate">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_633">ReportDate.ToString("dd-MM-yyyy")</mca:CSharpValue>
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_719">ReportDate.ToString("dd-MM-yyy")</mca:CSharpValue>
                                 </InArgument>
                                 <OutArgument x:TypeArguments="x:String" x:Key="out_UploadFileName">
                                   <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">UploadFilePath</mca:CSharpReference>
