@@ -11,7 +11,7 @@
     <InArgument x:TypeArguments="x:Decimal" />
   </this:Build_Upload_File.in_TotalAmountBase2>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>697,2391</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>697,3104</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="43">
@@ -109,7 +109,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Build_Upload_File" sap:VirtualizedContainerService.HintSize="418,2326" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Build_Upload_File" sap:VirtualizedContainerService.HintSize="557,3039" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ReportSheetName" />
       <Variable x:TypeArguments="x:String" Name="SisfigFilePath" />
@@ -139,7 +139,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Build Upload File" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info">
+    <ui:LogMessage DisplayName="Log Message Build Upload File" sap:VirtualizedContainerService.HintSize="515,51" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_502">"Building Upload File Started..."</mca:CSharpValue>
@@ -152,7 +152,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="515,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="473,143" sap2010:WorkflowViewState.IdRef="Sequence_592">
           <sap:WorkflowViewStateService.ViewState>
@@ -287,7 +287,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:MultipleAssign DisplayName="Multiple Assign WF Variables" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
+    <ui:MultipleAssign DisplayName="Multiple Assign WF Variables" sap:VirtualizedContainerService.HintSize="515,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_44">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_370">
@@ -369,7 +369,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:BuildDataTable DisplayName="Build Upload File Data Table" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Account_x0020_number&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Narration&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DESTINATIONAMOUNT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TYPE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+    <ui:BuildDataTable DisplayName="Build Upload File Data Table" sap:VirtualizedContainerService.HintSize="515,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Account_x0020_number&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Narration&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DESTINATIONAMOUNT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TYPE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
       <ui:BuildDataTable.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">UploadFileDT</mca:CSharpReference>
@@ -382,7 +382,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:BuildDataTable>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetMerchantDetails workflow" sap:VirtualizedContainerService.HintSize="376,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="CreditVoucher\\GetMerchantDetails.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetMerchantDetails workflow" sap:VirtualizedContainerService.HintSize="515,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="CreditVoucher\\GetMerchantDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_SisfigFilePath">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3376">SisfigFilePath</mca:CSharpValue>
@@ -402,7 +402,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <Assign DisplayName="Assign CreditAccountNumber" sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_554">
+    <Assign DisplayName="Assign CreditAccountNumber" sap:VirtualizedContainerService.HintSize="515,60" sap2010:WorkflowViewState.IdRef="Assign_554">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3050">CreditAccountNumber</mca:CSharpReference>
@@ -414,7 +414,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Sequence DisplayName="Sequence: Upload File" sap:VirtualizedContainerService.HintSize="376,376" sap2010:WorkflowViewState.IdRef="Sequence_567">
+    <Sequence DisplayName="Sequence: Upload File" sap:VirtualizedContainerService.HintSize="515,717" sap2010:WorkflowViewState.IdRef="Sequence_567">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="CreditVDT" />
       </Sequence.Variables>
@@ -424,7 +424,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Process File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_54">
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range Process File" sap:VirtualizedContainerService.HintSize="473,87" sap2010:WorkflowViewState.IdRef="ReadRange_54">
         <ui:ReadRange.DataTable>
           <OutArgument x:TypeArguments="sd:DataTable">
             <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2841">CreditVDT</mca:CSharpReference>
@@ -452,7 +452,7 @@
           </InArgument>
         </ui:ReadRange.WorkbookPath>
       </ui:ReadRange>
-      <If DisplayName="If  Transaction Exist" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_65">
+      <If DisplayName="If  Transaction Exist" sap:VirtualizedContainerService.HintSize="473,51" sap2010:WorkflowViewState.IdRef="If_65">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3273">CreditVDT.Rows.Count &gt; 0</mca:CSharpValue>
@@ -465,7 +465,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Dollar Sheet: Update all Merchant" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_45">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Dollar Sheet: Update all Merchant" sap:VirtualizedContainerService.HintSize="434,541" sap2010:WorkflowViewState.IdRef="ForEachRow_45">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -483,7 +483,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="if (Row[&quot;USD&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;USD&quot;;&#xD;&#xA;}&#xD;&#xA;else if (Row[&quot;NGN&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;NGN&quot;;&#xD;&#xA;}&#xD;&#xA;else if (Row[&quot;GBP&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xD;&#xA;}&#xD;&#xA;else if (Row[&quot;EUR&quot;].ToString() != &quot;&quot;)&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xD;&#xA;}&#xD;&#xA;else&#xD;&#xA;{&#xD;&#xA;&#x9;AcctType = &quot;UNCONFRIMED&quot;;&#xD;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="if (Row[&quot;USD&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;USD&quot;;&#xA;}&#xA;else if (Row[&quot;NGN&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;NGN&quot;;&#xA;}&#xA;else if (Row[&quot;GBP&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xA;}&#xA;else if (Row[&quot;EUR&quot;].ToString() != &quot;&quot;)&#xA;{&#xA;&#x9;AcctType = &quot;GBPEUR&quot;;&#xA;}&#xA;else&#xA;{&#xA;&#x9;AcctType = &quot;UNCONFRIMED&quot;;&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="230,51" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                     <ui:InvokeCode.Arguments>
                       <InArgument x:TypeArguments="sd:DataRow" x:Key="Row">
                         <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3304">CurrentTrans</mca:CSharpValue>
@@ -1256,7 +1256,7 @@
             </ui:ForEachRow.DataTable>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
@@ -1272,14 +1272,14 @@
           </Sequence>
         </If.Else>
       </If>
-      <Sequence DisplayName="Sequence Credit Voucher" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_591">
+      <Sequence DisplayName="Sequence Credit Voucher" sap:VirtualizedContainerService.HintSize="473,407" sap2010:WorkflowViewState.IdRef="Sequence_591">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_211">
+        <ui:MultipleAssign DisplayName="Multiple Assign Each Account" sap:VirtualizedContainerService.HintSize="431,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_211">
           <ui:MultipleAssign.AssignOperations>
             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1808">
@@ -1342,28 +1342,16 @@
                   </InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
-              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1814">
-                <ui:AssignOperation.To>
-                  <OutArgument x:TypeArguments="x:Object">
-                    <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3051">AddRow["DESTINATIONAMOUNT"]</mca:CSharpReference>
-                  </OutArgument>
-                </ui:AssignOperation.To>
-                <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:Object">
-                    <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3410">"0"</mca:CSharpValue>
-                  </InArgument>
-                </ui:AssignOperation.Value>
-              </ui:AssignOperation>
             </scg:List>
           </ui:MultipleAssign.AssignOperations>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:MultipleAssign>
-        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AddDataRow_196">
+        <ui:AddDataRow ArrayRow="{x:Null}" DisplayName="Add Data Row " sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="AddDataRow_196">
           <ui:AddDataRow.DataRow>
             <InArgument x:TypeArguments="sd:DataRow">
               <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3399">AddRow</mca:CSharpValue>
@@ -1383,7 +1371,7 @@
         </ui:AddDataRow>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="END the Upload File" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_85">
+    <Sequence DisplayName="END the Upload File" sap:VirtualizedContainerService.HintSize="515,438" sap2010:WorkflowViewState.IdRef="Sequence_85">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="merAccountNum" />
         <Variable x:TypeArguments="x:Decimal" Name="totalFEE" />
@@ -1391,11 +1379,11 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_33">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,255" sap2010:WorkflowViewState.IdRef="MultipleAssign_33">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_266">
@@ -1444,6 +1432,30 @@
                 </InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1815">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:Object">
+                  <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3052">AddRow["DESTINATIONAMOUNT"]</mca:CSharpReference>
+                </OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:Object">
+                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3411">"0"</mca:CSharpValue>
+                </InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1816">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:Object">
+                  <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3053">AddRow["Type"]</mca:CSharpReference>
+                </OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:Object">
+                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3412">"-"</mca:CSharpValue>
+                </InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
         <sap:WorkflowViewStateService.ViewState>
@@ -1472,7 +1484,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:AddDataRow>
     </Sequence>
-    <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="OutputDataTable_3">
+    <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="515,51" sap2010:WorkflowViewState.IdRef="OutputDataTable_3">
       <ui:OutputDataTable.DataTable>
         <InArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_297">UploadFileDT</mca:CSharpValue>
@@ -1490,7 +1502,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OutputDataTable>
-    <ui:LogMessage DisplayName="Log Message Upload Data" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info">
+    <ui:LogMessage DisplayName="Log Message Upload Data" sap:VirtualizedContainerService.HintSize="515,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_482">dataTest.ToString()</mca:CSharpValue>
@@ -1503,7 +1515,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Assign DisplayName="Assign debit" sap:VirtualizedContainerService.HintSize="376,64" sap2010:WorkflowViewState.IdRef="Assign_96">
+    <Assign DisplayName="Assign debit" sap:VirtualizedContainerService.HintSize="515,64" sap2010:WorkflowViewState.IdRef="Assign_96">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Decimal">
           <mca:CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_424">Debit</mca:CSharpReference>
