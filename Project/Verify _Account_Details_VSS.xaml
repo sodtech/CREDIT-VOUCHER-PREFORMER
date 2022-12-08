@@ -11,7 +11,7 @@
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:Verify__Account_Details_VSS.in_Sysfig>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>877,3625</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>877,2114</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -92,7 +92,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verify__Account_Details_VSS" sap:VirtualizedContainerService.HintSize="887,3560" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verify__Account_Details_VSS" sap:VirtualizedContainerService.HintSize="376,829" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProcessingFilePath" />
       <Variable x:TypeArguments="x:String" Name="ProcessingFolderPath" />
@@ -109,105 +109,134 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Balance Verification" sap:VirtualizedContainerService.HintSize="845,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+    <ui:LogMessage DisplayName="Log Message: Balance Verification" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Bot to verify amount Started"</mca:CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="845,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="473,143" sap2010:WorkflowViewState.IdRef="Sequence_28">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="TO TEST" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-            <ui:MultipleAssign.AssignOperations>
-              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-                      <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">in_Config</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-                      <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new Dictionary&lt;string,object&gt;()</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-                      <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">in_Sysfig</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
-                      <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">new Dictionary&lt;string, object&gt;()</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:Object">
-                      <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">in_Config["ProcessingFolderPath"]</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:Object">
-                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">@"C:\Users\tmpa11194\Documents\_BotWorkDirectories\CreditVoucher_WorkDirectories\WorkFolders\Processing"</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:Object">
-                      <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">in_Config["WorkLogTemplateFileName"]</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:Object">
-                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"CreditVoucher_WorkLog"</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:Object">
-                      <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">in_Config["input_FileName"]</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:Object">
-                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"CreditVoucher_WorkLog.xlsx"</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                  <ui:AssignOperation.To>
-                    <OutArgument x:TypeArguments="x:Decimal">
-                      <mca:CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">in_TotalAmountBase2</mca:CSharpReference>
-                    </OutArgument>
-                  </ui:AssignOperation.To>
-                  <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:Decimal">
-                      <mca:CSharpValue x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">778.99m</mca:CSharpValue>
-                    </InArgument>
-                  </ui:AssignOperation.Value>
-                </ui:AssignOperation>
-              </scg:List>
-            </ui:MultipleAssign.AssignOperations>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="473,143" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MultipleAssign DisplayName="TO TEST" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign.AssignOperations>
+                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+                            <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">in_Config</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+                            <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new Dictionary&lt;string,object&gt;()</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+                            <mca:CSharpReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">in_Sysfig</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+                            <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">new Dictionary&lt;string, object&gt;()</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:Object">
+                            <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">in_Config["ProcessingFolderPath"]</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:Object">
+                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">@"C:\Users\tmpa11194\Documents\_BotWorkDirectories\CreditVoucher_WorkDirectories\WorkFolders\Processing"</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:Object">
+                            <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">in_Config["WorkLogTemplateFileName"]</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:Object">
+                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"CreditVoucher_WorkLog"</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:Object">
+                            <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">in_Config["input_FileName"]</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:Object">
+                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"CreditVoucher_WorkLog.xlsx"</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:Decimal">
+                            <mca:CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">in_TotalAmountBase2</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:Decimal">
+                            <mca:CSharpValue x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">1484.43m</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:Object">
+                            <mca:CSharpReference x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">in_Sysfig["ExcelPassword"]</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:Object">
+                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">"123456"</mca:CSharpValue>
+                          </InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                    </scg:List>
+                  </ui:MultipleAssign.AssignOperations>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:MultipleAssign>
+              </Sequence>
+            </ui:CommentOut.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-          </ui:MultipleAssign>
+          </ui:CommentOut>
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -217,7 +246,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:MultipleAssign DisplayName="Assign all WF Varables" sap:VirtualizedContainerService.HintSize="845,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="Assign all WF Varables" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -263,7 +292,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range: Vss Sheet" sap:VirtualizedContainerService.HintSize="845,87" sap2010:WorkflowViewState.IdRef="ReadRange_1">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range: Vss Sheet" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="ReadRange_1">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">ReportDT</mca:CSharpReference>
@@ -281,7 +310,7 @@
       </ui:ReadRange.SheetName>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -291,43 +320,40 @@
         </InArgument>
       </ui:ReadRange.WorkbookPath>
     </ui:ReadRange>
-    <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="845,2362" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <If DisplayName="If the Amount is found" sap:VirtualizedContainerService.HintSize="811,2247" sap2010:WorkflowViewState.IdRef="If_1">
+          <If DisplayName="If the Amount is found" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
-                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65" xml:space="preserve">CurrentRow["Column2"].ToString().StartsWith("1000339564 FBN") &amp;&amp; 
-CurrentRow["Column3"].ToString().ToUpper().Trim() == "ISSUER TRANSACTIONS" &amp;&amp; 
-CurrentRow["Column7"].ToString().ToUpper().Trim() == "QUASI-CASH" &amp;&amp; 
-CurrentRow["Column9"].ToString().Trim() == "1000339563 FIRST BANK NIGE"  &amp;&amp; 
-CurrentRow["Column11"].ToString().Trim() == "840"</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74" xml:space="preserve">CurrentRow["Column2"].ToString().StartsWith("1000339564 FBN") &amp;&amp; 
+CurrentRow["Column3"].ToString().ToUpper().Trim() == "ISSUER TRANSACTIONS"</mca:CSharpValue>
               </InArgument>
             </If.Condition>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="775,2056" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="741,1941" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <Sequence sap:VirtualizedContainerService.HintSize="526,430" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If DisplayName="If the Amount is found" sap:VirtualizedContainerService.HintSize="699,247" sap2010:WorkflowViewState.IdRef="If_9">
+                      <If DisplayName="If the Amount is found" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_9">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">IndexNumber == Indexnumber2</mca:CSharpValue>
@@ -361,7 +387,7 @@ CurrentRow["Column11"].ToString().Trim() == "840"</mca:CSharpValue>
                           </Sequence>
                         </If.Else>
                       </If>
-                      <If DisplayName="When to start checking " sap:VirtualizedContainerService.HintSize="699,1562" sap2010:WorkflowViewState.IdRef="If_12">
+                      <If DisplayName="When to start checking " sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_12">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">StartChecking == "YES"</mca:CSharpValue>
@@ -369,7 +395,7 @@ CurrentRow["Column11"].ToString().Trim() == "840"</mca:CSharpValue>
                         </If.Condition>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
@@ -614,7 +640,7 @@ Row["Column12"].ToString().Trim() == "840"</mca:CSharpValue>
                 </ui:ForEachRow.DataTable>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -644,12 +670,12 @@ Row["Column12"].ToString().Trim() == "840"</mca:CSharpValue>
       </ui:ForEachRow.DataTable>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="Log Message Vss Amont" sap:VirtualizedContainerService.HintSize="845,51" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+    <ui:LogMessage DisplayName="Log Message Vss Amont" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">"Total Amount Found in VSS report: "+AmountBase2.ToString()</mca:CSharpValue>
@@ -662,7 +688,7 @@ Row["Column12"].ToString().Trim() == "840"</mca:CSharpValue>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:LogMessage DisplayName="Log Message Base confriming" sap:VirtualizedContainerService.HintSize="845,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+    <ui:LogMessage DisplayName="Log Message Base confriming" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">"Bot Confriming the Amount gotten in Vss 120 with the Base 2 Amount"</mca:CSharpValue>
@@ -670,12 +696,12 @@ Row["Column12"].ToString().Trim() == "840"</mca:CSharpValue>
       </ui:LogMessage.Message>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <If DisplayName="If Balanced are Equal" sap:VirtualizedContainerService.HintSize="845,249" sap2010:WorkflowViewState.IdRef="If_14">
+    <If DisplayName="If Balanced are Equal" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="If_14">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">in_TotalAmountBase2 == AmountBase2</mca:CSharpValue>
@@ -683,12 +709,12 @@ Row["Column12"].ToString().Trim() == "840"</mca:CSharpValue>
       </If.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
           <ui:LogMessage.Message>
             <InArgument x:TypeArguments="x:Object">
               <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">"Amount Confrimed: PROCEED"</mca:CSharpValue>
@@ -710,18 +736,5 @@ Row["Column12"].ToString().Trim() == "840"</mca:CSharpValue>
         </Throw>
       </If.Else>
     </If>
-    <ui:WriteCell Cell="F2" DisplayName="Write Report Recived Cell" sap:VirtualizedContainerService.HintSize="845,115" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Tracker Sheet" Text="DONE">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:WriteCell.WorkbookPath>
-        <InArgument x:TypeArguments="x:String">
-          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">Path.Combine(ProcessingFolderPath,"Tracker.xlsx")</mca:CSharpValue>
-        </InArgument>
-      </ui:WriteCell.WorkbookPath>
-    </ui:WriteCell>
   </Sequence>
 </Activity>
