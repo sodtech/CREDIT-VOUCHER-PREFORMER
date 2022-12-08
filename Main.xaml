@@ -105,7 +105,6 @@
       <AssemblyReference>UiPath.Orchestrator.Service</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Bot Hub" sap:VirtualizedContainerService.HintSize="802,1468" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -305,7 +304,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">310,160 340,160 340,50 370,50</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="304,839" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Load all Config Portal" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Boolean" Name="TrackerFileExist" />
                         <Variable x:TypeArguments="x:String" Name="TrackerFilePath" />
@@ -507,28 +506,22 @@
                             <av:PointCollection x:Key="ConnectorLocation">470,75.5 470,143</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_71">
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetReports workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_118" UnSafe="False" WorkflowFileName="Project\\GetReports.xaml">
-                                <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                    <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_716">Config</mca:CSharpValue>
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">
-                                    <mca:CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_715">ReportDate</mca:CSharpValue>
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Sysfig">
-                                    <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_714">Sysfig</mca:CSharpValue>
-                                  </InArgument>
-                                  <OutArgument x:TypeArguments="x:Decimal" x:Key="out_TotalAmountBase2">
-                                    <mca:CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_251">TotalAmountBase2</mca:CSharpReference>
-                                  </OutArgument>
-                                </ui:InvokeWorkflowFile.Arguments>
-                              </ui:InvokeWorkflowFile>
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                        </ui:CommentOut>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetReports workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_118" UnSafe="False" WorkflowFileName="Project\\GetReports.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_716">Config</mca:CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">
+                              <mca:CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_715">ReportDate</mca:CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Sysfig">
+                              <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_714">Sysfig</mca:CSharpValue>
+                            </InArgument>
+                            <OutArgument x:TypeArguments="x:Decimal" x:Key="out_TotalAmountBase2">
+                              <mca:CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_251">TotalAmountBase2</mca:CSharpReference>
+                            </OutArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
                         <FlowStep.Next>
                           <FlowStep x:Name="__ReferenceID0">
                             <sap:WorkflowViewStateService.ViewState>
