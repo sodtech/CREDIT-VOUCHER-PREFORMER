@@ -15,7 +15,7 @@
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:GetReports.in_Sysfig>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>770,2164</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>770,2814</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -99,9 +99,10 @@
       <AssemblyReference>UiPath.Orchestrator.Service</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get Reports" sap:VirtualizedContainerService.HintSize="418,2160" sap2010:WorkflowViewState.IdRef="Sequence_28">
+  <Sequence DisplayName="Get Reports" sap:VirtualizedContainerService.HintSize="473,2749" sap2010:WorkflowViewState.IdRef="Sequence_28">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProcessingFolderPath" />
       <Variable x:TypeArguments="x:String" Name="ProcessingFilePath" />
@@ -128,9 +129,9 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="431,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="605,978" sap2010:WorkflowViewState.IdRef="Sequence_54">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="605,1156" sap2010:WorkflowViewState.IdRef="Sequence_54">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -499,7 +500,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:MultipleAssign DisplayName="Assign all WF Varables" sap:VirtualizedContainerService.HintSize="376,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_16">
+    <ui:MultipleAssign DisplayName="Assign all WF Varables" sap:VirtualizedContainerService.HintSize="431,472" sap2010:WorkflowViewState.IdRef="MultipleAssign_16">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_70">
@@ -606,7 +607,7 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_655">in_ReportDate.ToString("dd-MM-yyyy")+"_CreditVoucher_WorkLog.xlsx"</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_722">"CreditVoucher_WorkLog_"+in_ReportDate.ToString("dd-MM-yyyy")+"xlsx"</mca:CSharpValue>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -660,42 +661,72 @@
       </ui:MultipleAssign.AssignOperations>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Sequence: Download File" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
+    <Sequence DisplayName="Sequence: Download File" sap:VirtualizedContainerService.HintSize="431,234" sap2010:WorkflowViewState.IdRef="Sequence_32">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" DisplayName="Download Storage File: Credit Voucher Report" sap:VirtualizedContainerService.HintSize="284,132" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1">
-        <ucas:DownloadStorageFile.Destination>
-          <InArgument x:TypeArguments="x:String">
-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_328">ProcessingFilePath</mca:CSharpValue>
-          </InArgument>
-        </ucas:DownloadStorageFile.Destination>
-        <ucas:DownloadStorageFile.Path>
-          <InArgument x:TypeArguments="x:String">
-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_327">InputFileName</mca:CSharpValue>
-          </InArgument>
-        </ucas:DownloadStorageFile.Path>
-        <ucas:DownloadStorageFile.StorageBucketName>
-          <InArgument x:TypeArguments="x:String">
-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_323">BitBucketName</mca:CSharpValue>
-          </InArgument>
-        </ucas:DownloadStorageFile.StorageBucketName>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_4">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ucas:DownloadStorageFile>
-      <ui:LogMessage DisplayName="Log Message: Downloaded " sap:VirtualizedContainerService.HintSize="284,51" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info">
+        <TryCatch.Try>
+          <ucas:DownloadStorageFile TimeoutMS="{x:Null}" DisplayName="Download Storage File: Credit Voucher Report" sap:VirtualizedContainerService.HintSize="284,132" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1">
+            <ucas:DownloadStorageFile.Destination>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_328">ProcessingFilePath</mca:CSharpValue>
+              </InArgument>
+            </ucas:DownloadStorageFile.Destination>
+            <ucas:DownloadStorageFile.Path>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_327">InputFileName</mca:CSharpValue>
+              </InArgument>
+            </ucas:DownloadStorageFile.Path>
+            <ucas:DownloadStorageFile.StorageBucketName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_323">BitBucketName</mca:CSharpValue>
+              </InArgument>
+            </ucas:DownloadStorageFile.StorageBucketName>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ucas:DownloadStorageFile>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Throw DisplayName="Throw BRE" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_6">
+                <InArgument x:TypeArguments="s:Exception">
+                  <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_723">new BusinessRuleException("I cannot find the report ["+InputFileName+"] in the storage bucket")</mca:CSharpValue>
+                </InArgument>
+              </Throw>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+      <ui:LogMessage DisplayName="Log Message: Downloaded " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_654">"Report Downloaded From Stoarege bucket to processing"</mca:CSharpValue>
@@ -709,7 +740,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:LogMessage>
     </Sequence>
-    <Sequence DisplayName="Get TotalAmountBase2" sap:VirtualizedContainerService.HintSize="376,410" sap2010:WorkflowViewState.IdRef="Sequence_78">
+    <Sequence DisplayName="Get TotalAmountBase2" sap:VirtualizedContainerService.HintSize="431,410" sap2010:WorkflowViewState.IdRef="Sequence_78">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="DT" />
       </Sequence.Variables>
@@ -761,7 +792,7 @@
         </ui:LogMessage.Message>
       </ui:LogMessage>
     </Sequence>
-    <Sequence DisplayName="Dowload  VSS 120" sap:VirtualizedContainerService.HintSize="376,981" sap2010:WorkflowViewState.IdRef="Sequence_75">
+    <Sequence DisplayName="Dowload  VSS 120" sap:VirtualizedContainerService.HintSize="431,981" sap2010:WorkflowViewState.IdRef="Sequence_75">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="Counter" />
         <Variable x:TypeArguments="si:FileInfo" Name="FileDownloaded" />
